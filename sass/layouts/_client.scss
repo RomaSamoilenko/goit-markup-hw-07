@@ -4,11 +4,12 @@
 }
 
 .client-title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: calc(42 / 36);
+    @include font(700, 36, 42, 0.03em);
+    // font-weight: 700;
+    // font-size: 36px;
+    // line-height: calc(42 / 36);
     text-align: center;
-    letter-spacing: 0.03em;
+    // letter-spacing: 0.03em;
     color: var(--first-title-color--);
     margin-bottom: 50px;
 }
@@ -28,15 +29,15 @@
     align-items: center;
     justify-content: center;
     color: rgba(175, 177, 184, 1);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus,
+        &:hover {
+            color: rgba(33, 150, 243, 1);
+            border-color: var(--acent-color--);
+        }
 }
 
 .client-icon {
     fill: currentColor;
 }
 
-.client-logo-link:focus,
-.client-logo-link:hover {
-    color: rgba(33, 150, 243, 1);
-    border-color: var(--acent-color--);
-}

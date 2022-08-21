@@ -1,4 +1,4 @@
-.logo {
+.navigetion__logo {
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
@@ -8,31 +8,36 @@
     color: #000000;
 }
 
-.logo-acent {
+.navigetion__acent {
     color: var(--acent-color--)
 }
 
 
 
-.logo {
+.navigetion__logo {
     display: flex;
     margin-right: 93px;
     align-items: center;
 }
 
-.heder-nav {
+.navigetion {
     display: flex;
     align-items: center;
 }
 
-.header-list {
+.navigetion__list {
     display: flex;
     align-items: center;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus,
+        &:hover {
+            color: var(--acent-color--);
+            cursor: pointer;
+        }
 }
 
 
-.header-link {
+.connect {
     display: flex;
     margin-left: auto;
     align-items: center;
@@ -45,11 +50,11 @@
     align-items: center;
 }
 
-.header-item:not(:last-child) {
+.navigetion__item:not(:last-child) {
     margin-right: 50px;
 }
 
-.header-list {
+.navigetion__list {
     font-weight: 500;
     font-size: 14px;
     line-height: calc(16/14);
@@ -57,17 +62,32 @@
     color: var(--first-title-color--);
 }
 
-.header-link {
+.connect {
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: calc(16/14);
     letter-spacing: 0.02em;
     color: #757575;
+    & :focus,
+    & :hover {
+    color: var(--acent-color--);
+    cursor: pointer;
+}
 }
 
 .active {
     position: relative;
+    &::after {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 4px;
+            border-radius: 2px;
+            left: 0;
+            background-color: var(--acent-color--);
+            bottom: -28px;
+        }
 
 }
 
@@ -75,25 +95,17 @@
     color: var(--acent-color--);
 }
 
-.active::after {
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    left: 0;
-    background-color: var(--acent-color--);
-    bottom: -28px;
-}
+
 
 .header {
     padding-top: 24px;
     padding-bottom: 24px;
     border-bottom: 1px solid rgba(236, 236, 236, 1);
+    
 }
 
 
-.header-link-contact {
+.connect__contact {
     display: flex;
     margin-left: auto;
     align-items: center;
@@ -105,19 +117,10 @@
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-icon {
+.connect__icon {
     fill: currentColor;
     margin-right: 10px;
 }
 
-.header-list:focus,
-.header-list:hover {
-    color: var(--acent-color--);
-    cursor: pointer;
-}
 
-.header-link :focus,
-.header-link :hover {
-    color: var(--acent-color--);
-    cursor: pointer;
-}
+
